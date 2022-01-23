@@ -806,7 +806,7 @@ class Net:
 
             results = namedtuple('get_host_results', 'hostname, aliaslist, '
                                                      'ipaddrlist')
-            return results(ret)
+            return results(*ret)
 
         except (socket.timeout, socket.error) as e:
 
